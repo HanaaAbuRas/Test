@@ -1,4 +1,4 @@
-
+import java.math.*;
 /**
  * Klasse Main.
  * 
@@ -12,15 +12,15 @@ public class Main
     {
         int obereGrenze = 75;
         int summe = 0;
-        for(int i = 1; i <= 10; ++i)
+        for(int i = 1; i <= obereGrenze; ++i)
         {
-            summe = summe + i;
+            summe += i;
         }
         
-        int mult = 1;
-        for(int i = 2; i <= 10; ++i)
+        BigInteger mult = new BigInteger("1");
+        for(int i = 2; i <= obereGrenze; ++i)
         {
-            mult = mult * i;
+            mult = mult.multiply(BigInteger.valueOf(i));
         }
         
         System.out.println("Summe: " + summe + " Multi: " + mult);
